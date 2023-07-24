@@ -9,6 +9,7 @@ import UIKit
 
 class HomeViewController: UIViewController {
     override func viewDidLoad() {
+        navigationItem.title = "おすすめ"
         print("HomeViewControllerが表示されました！")
     }
 }
