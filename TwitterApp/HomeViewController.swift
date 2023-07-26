@@ -16,7 +16,6 @@ class HomeViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         navigationItem.title = "おすすめ"
-        print("HomeViewControllerが表示されました！")
         
         tableView.dataSource = self
         tableView.tableFooterView = UIView()
