@@ -24,12 +24,12 @@ class HomeViewController: UIViewController {
     }
     
     func setTweetData() {
-        for i in 1...3 {
-            let tweetDataModel = TweetDataModel(text: "ツイート内容")
-            tweetDataList.append(tweetDataModel)
+            let tweetDataModel1 = TweetDataModel(text: "ツイート内容1")
+            let tweetDataModel2 = TweetDataModel(text: "ツイート内容2")
+            let tweetDataModel3 = TweetDataModel(text: "ツイート内容3")
+            tweetDataList.append(contentsOf: [tweetDataModel1, tweetDataModel2, tweetDataModel3])
         }
     }
-}
 
 extension HomeViewController: UITableViewDelegate, UITableViewDataSource {
     /// データの数（＝セルの数）を返すメソッド
