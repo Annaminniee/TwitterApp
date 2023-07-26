@@ -20,6 +20,7 @@ class HomeViewController: UIViewController {
         tableView.dataSource = self
         tableView.tableFooterView = UIView()
         setTweetData()
+        tableView.register(UINib(nibName: "TableViewCell", bundle: nil), forCellReuseIdentifier: "TableViewCell")
     }
     
     func setTweetData() {
@@ -37,7 +38,7 @@ extension HomeViewController: UITableViewDataSource {
     }
     /// 各セルの内容を返すメソッド
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = UITableViewCell()
+        let cell = tableView.dequeueReusableCell(withIdentifier: "TableViewCell", for: indexPath) as! TableViewCell
         let tweetDataModel: TweetDataModel = tweetDataList[indexPath.row]
         cell.textLabel?.text = tweetDataModel.text
         return cell
