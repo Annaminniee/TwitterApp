@@ -9,7 +9,13 @@ import UIKit
 
 class TableViewCell: UITableViewCell {
     
-    @IBOutlet weak var titleLabel: UIView!
+    @IBOutlet weak var usernameLabel: UILabel!
+    @IBOutlet weak var detailTextView: UITextView!
+    
+    func setup(username: String, detail: String) {
+        usernameLabel.text = username
+        detailTextView.text = detail
+    }
     
     override func awakeFromNib() {
         super.awakeFromNib()
