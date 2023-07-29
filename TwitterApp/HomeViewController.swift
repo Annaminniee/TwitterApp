@@ -36,8 +36,8 @@ class HomeViewController: UIViewController {
         let tweetDataModel2 = TweetDataModel(name: "ユーザー名2", text: "ツイート内容2")
         let tweetDataModel3 = TweetDataModel(name: "ユーザー名3", text: "ツイート内容3")
         tweetDataList.append(contentsOf: [tweetDataModel1, tweetDataModel2, tweetDataModel3])
-        }
     }
+}
 
 extension HomeViewController: UITableViewDataSource {
     /// データの数（＝セルの数）を返すメソッド
