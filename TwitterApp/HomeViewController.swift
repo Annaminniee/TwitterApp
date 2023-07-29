@@ -48,7 +48,6 @@ extension HomeViewController: UITableViewDataSource {
         // 再利用可能な cell を得る
         let cell = tableView.dequeueReusableCell(withIdentifier: "Cell", for: indexPath) as! TweetTableViewCell
         let tweetDataModel: TweetDataModel = tweetDataList[indexPath.row]
-        cell.textLabel?.text = tweetDataModel.text
         cell.setup(username: tweetDataModel.name, detail: tweetDataModel.text)
         // ここにセルに渡す処理を書く
         return cell
@@ -60,6 +59,6 @@ extension HomeViewController: UITableViewDataSource {
 extension HomeViewController: UITableViewDelegate {
     /// セルの高さを設定するメソッド
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
-        return 100
+        return 200
     }
 }
