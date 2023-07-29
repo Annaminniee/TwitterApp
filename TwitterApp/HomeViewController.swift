@@ -16,14 +16,21 @@ class HomeViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        configTableView()
         navigationItem.title = "おすすめ"
         
-        tableView.dataSource = self
-        tableView.tableFooterView = UIView()
-        tableView.rowHeight = 100
-        setUserNameData()
-        setTweetData()
-        tableView.register(UINib(nibName: "TableViewCell", bundle: nil), forCellReuseIdentifier: "TableViewCell")
+        func configTableView(){
+            tableView.dataSource = self
+            tableView.delegate = self
+            tableView.tableFooterView = UIView()
+            tableView.rowHeight = 100
+            setUserNameData()
+            setTweetData()
+            //カスタムセル
+            let nib = UINib(nibName: "TweetTableViewCell", bundle: nil)
+            tableView.register(nib, forCellReuseIdentifier: "Cell")
+        }
+        
     }
     
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
@@ -60,6 +67,16 @@ extension HomeViewController: UITableViewDataSource {
         let tweetDataModel: TweetDataModel = tweetDataList[indexPath.row]
         cell.usernameLabel?.text = userNameDataModel.text
         cell.detailTextView?.text = tweetDataModel.text
+        // ここにセルに渡す処理を書く
         return cell
+    }
+}
+
+// MARK: - UITableViewDelegate
+
+extension HomeViewController: UITableViewDelegate {
+    /// セルの高さを設定するメソッド
+    func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
+        return 100
     }
 }
