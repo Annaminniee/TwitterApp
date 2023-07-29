@@ -17,13 +17,13 @@
                 <autoresizingMask key="autoresizingMask"/>
                 <subviews>
                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="252" text="nameLabel" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="FdO-Ri-uGz">
-                        <rect key="frame" x="30" y="10" width="330" height="30"/>
+                        <rect key="frame" x="30" y="30" width="330" height="30"/>
                         <fontDescription key="fontDescription" type="system" pointSize="25"/>
                         <nil key="textColor"/>
                         <nil key="highlightedColor"/>
                     </label>
                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="detailLabel" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="t4U-YY-zgD">
-                        <rect key="frame" x="30" y="70" width="330" height="206"/>
+                        <rect key="frame" x="30" y="90" width="330" height="186"/>
                         <fontDescription key="fontDescription" type="system" pointSize="16"/>
                         <nil key="textColor"/>
                         <nil key="highlightedColor"/>
@@ -35,7 +35,7 @@
                     <constraint firstAttribute="trailing" secondItem="FdO-Ri-uGz" secondAttribute="trailing" constant="30" id="Mli-zK-OUO"/>
                     <constraint firstItem="t4U-YY-zgD" firstAttribute="top" secondItem="FdO-Ri-uGz" secondAttribute="bottom" constant="30" id="YqK-iC-FsW"/>
                     <constraint firstAttribute="bottom" secondItem="t4U-YY-zgD" secondAttribute="bottom" constant="10" id="f2d-4X-2sU"/>
-                    <constraint firstItem="FdO-Ri-uGz" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="10" id="gVQ-am-QpS"/>
+                    <constraint firstItem="FdO-Ri-uGz" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="30" id="gVQ-am-QpS"/>
                     <constraint firstItem="FdO-Ri-uGz" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="30" id="iSt-l6-eYE"/>
                     <constraint firstItem="t4U-YY-zgD" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="30" id="mKp-WS-Ia0"/>
                 </constraints>
