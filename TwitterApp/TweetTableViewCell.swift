@@ -21,10 +21,10 @@ class TweetTableViewCell: UITableViewCell {
         super.setSelected(selected, animated: animated)
         
         // Configure the view for the selected state
-        
-        func setup(username: String, detail: String) {
-            nameLabel.text = username
-            detailLabel.text = detail
-        }
+    }
+    
+    func setup(username: String, detail: String) {
+        nameLabel.text = username
+        detailLabel.text = detail
     }
 }
