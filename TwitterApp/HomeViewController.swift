@@ -22,7 +22,6 @@ class HomeViewController: UIViewController {
             tableView.dataSource = self
             tableView.delegate = self
             tableView.tableFooterView = UIView()
-            setUserNameData()
             setTweetData()
             //カスタムセル
             let nib = UINib(nibName: "TweetTableViewCell", bundle: nil)

@@ -8,5 +8,6 @@
 import Foundation
 
 struct TweetDataModel {
+    var name: String
     var text: String
 }
