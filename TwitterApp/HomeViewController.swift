@@ -8,8 +8,7 @@
 import UIKit
 
 class HomeViewController: UIViewController {
-    
-    var userNameDataList: [UserNameDataModel] = []
+
     var tweetDataList: [TweetDataModel] = []
     
     @IBOutlet weak var tableView: UITableView!
@@ -23,7 +22,6 @@ class HomeViewController: UIViewController {
             tableView.dataSource = self
             tableView.delegate = self
             tableView.tableFooterView = UIView()
-            tableView.rowHeight = 100
             setUserNameData()
             setTweetData()
             //カスタムセル
@@ -37,13 +35,6 @@ class HomeViewController: UIViewController {
         return 100
     }
     
-    func setUserNameData() {
-        let userNameDataModel1 = UserNameDataModel(text: "ユーザー名1")
-        let userNameDataModel2 = UserNameDataModel(text: "ユーザー名2")
-        let userNameDataModel3 = UserNameDataModel(text: "ユーザー名3")
-        userNameDataList.append(contentsOf: [userNameDataModel1, userNameDataModel2, userNameDataModel3])
-    }
-    
     func setTweetData() {
         let tweetDataModel1 = TweetDataModel(text: "ツイート内容1")
         let tweetDataModel2 = TweetDataModel(text: "ツイート内容2")
@@ -55,7 +46,6 @@ class HomeViewController: UIViewController {
 extension HomeViewController: UITableViewDataSource {
     /// データの数（＝セルの数）を返すメソッド
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return userNameDataList.count
         return tweetDataList.count
     }
     /// 各セルの内容を返すメソッド
@@ -63,10 +53,8 @@ extension HomeViewController: UITableViewDataSource {
         // 再利用可能な cell を得る
         let cell = tableView.dequeueReusableCell(withIdentifier: "Cell", for: indexPath) as! TweetTableViewCell
         cell.setup(username: tweetDataModel.name, detail: tweetDataModel.text)
-        let userNameDataModel: UserNameDataModel = userNameDataList[indexPath.row]
         let tweetDataModel: TweetDataModel = tweetDataList[indexPath.row]
         cell.usernameLabel?.text = userNameDataModel.text
-        cell.detailTextView?.text = tweetDataModel.text
         // ここにセルに渡す処理を書く
         return cell
     }
