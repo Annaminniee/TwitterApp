@@ -1,20 +1,20 @@
 //
-//  TableViewCell.swift
+//  TweetTableViewCell.swift
 //  TwitterApp
 //
-//  Created by 菊地原杏菜 on 2023/07/27.
+//  Created by 菊地原杏菜 on 2023/07/29.
 //
 
 import UIKit
 
-class TableViewCell: UITableViewCell {
+class TweetTableViewCell: UITableViewCell {
     
-    @IBOutlet weak var usernameLabel: UILabel!
-    @IBOutlet weak var detailTextView: UITextView!
+    @IBOutlet weak var nameLabel: UILabel!
+    @IBOutlet weak var detailLabel: UILabel!
     
     func setup(username: String, detail: String) {
-        usernameLabel.text = username
-        detailTextView.text = detail
+       nameLabel.text = username
+       detailLabel.text = detail
     }
     
     override func awakeFromNib() {

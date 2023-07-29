@@ -53,7 +53,9 @@ extension HomeViewController: UITableViewDataSource {
     }
     /// 各セルの内容を返すメソッド
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: "TableViewCell", for: indexPath) as! TableViewCell
+        // 再利用可能な cell を得る
+        let cell = tableView.dequeueReusableCell(withIdentifier: "Cell", for: indexPath) as! TweetTableViewCell
+        cell.setup(username: tweetDataModel.name, detail: tweetDataModel.text)
         let userNameDataModel: UserNameDataModel = userNameDataList[indexPath.row]
         let tweetDataModel: TweetDataModel = tweetDataList[indexPath.row]
         cell.usernameLabel?.text = userNameDataModel.text
