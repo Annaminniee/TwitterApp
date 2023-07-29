@@ -19,6 +19,7 @@
 		95FF08DD2A709B6D0023EFBB /* TweetDataModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 95FF08DC2A709B6D0023EFBB /* TweetDataModel.swift */; };
 		95FF08E82A74DBA30023EFBB /* TweetTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 95FF08E62A74DBA30023EFBB /* TweetTableViewCell.swift */; };
 		95FF08E92A74DBA30023EFBB /* TweetTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 95FF08E72A74DBA30023EFBB /* TweetTableViewCell.xib */; };
+		95FF08EB2A74EFC30023EFBB /* UserNameDataModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 95FF08EA2A74EFC30023EFBB /* UserNameDataModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -55,6 +56,7 @@
 		95FF08DC2A709B6D0023EFBB /* TweetDataModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TweetDataModel.swift; sourceTree = "<group>"; };
 		95FF08E62A74DBA30023EFBB /* TweetTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TweetTableViewCell.swift; sourceTree = "<group>"; };
 		95FF08E72A74DBA30023EFBB /* TweetTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = TweetTableViewCell.xib; sourceTree = "<group>"; };
+		95FF08EA2A74EFC30023EFBB /* UserNameDataModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserNameDataModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -113,6 +115,7 @@
 				95FF08B22A6BAA140023EFBB /* Info.plist */,
 				95FF08D82A6D10710023EFBB /* HomeViewController.swift */,
 				95FF08DC2A709B6D0023EFBB /* TweetDataModel.swift */,
+				95FF08EA2A74EFC30023EFBB /* UserNameDataModel.swift */,
 				95FF08E62A74DBA30023EFBB /* TweetTableViewCell.swift */,
 				95FF08E72A74DBA30023EFBB /* TweetTableViewCell.xib */,
 			);
@@ -269,6 +272,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				95FF08A52A6BAA130023EFBB /* AppDelegate.swift in Sources */,
+				95FF08EB2A74EFC30023EFBB /* UserNameDataModel.swift in Sources */,
 				95FF08A72A6BAA130023EFBB /* SceneDelegate.swift in Sources */,
 				95FF08D92A6D10710023EFBB /* HomeViewController.swift in Sources */,
 				95FF08DD2A709B6D0023EFBB /* TweetDataModel.swift in Sources */,
