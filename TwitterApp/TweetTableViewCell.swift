@@ -12,11 +12,6 @@ class TweetTableViewCell: UITableViewCell {
     @IBOutlet weak var nameLabel: UILabel!
     @IBOutlet weak var detailLabel: UILabel!
     
-    func setup(username: String, detail: String) {
-       nameLabel.text = username
-       detailLabel.text = detail
-    }
-    
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code
@@ -24,8 +19,12 @@ class TweetTableViewCell: UITableViewCell {
 
     override func setSelected(_ selected: Bool, animated: Bool) {
         super.setSelected(selected, animated: animated)
-
+        
         // Configure the view for the selected state
+        
+        func setup(username: String, detail: String) {
+            nameLabel.text = username
+            detailLabel.text = detail
+        }
     }
-    
 }
