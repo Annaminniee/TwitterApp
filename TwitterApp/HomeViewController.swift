@@ -31,10 +31,6 @@ class HomeViewController: UIViewController {
         
     }
     
-    func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
-        return 100
-    }
-    
     func setTweetData() {
         let tweetDataModel1 = TweetDataModel(name: "ユーザー名1", text: "ツイート内容1")
         let tweetDataModel2 = TweetDataModel(name: "ユーザー名2", text: "ツイート内容2")
