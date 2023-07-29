@@ -36,9 +36,9 @@ class HomeViewController: UIViewController {
     }
     
     func setTweetData() {
-        let tweetDataModel1 = TweetDataModel(text: "ツイート内容1")
-        let tweetDataModel2 = TweetDataModel(text: "ツイート内容2")
-        let tweetDataModel3 = TweetDataModel(text: "ツイート内容3")
+        let tweetDataModel1 = TweetDataModel(name: "ユーザー名1", text: "ツイート内容1")
+        let tweetDataModel2 = TweetDataModel(name: "ユーザー名2", text: "ツイート内容2")
+        let tweetDataModel3 = TweetDataModel(name: "ユーザー名3", text: "ツイート内容3")
         tweetDataList.append(contentsOf: [tweetDataModel1, tweetDataModel2, tweetDataModel3])
         }
     }
