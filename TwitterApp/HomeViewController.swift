@@ -17,18 +17,18 @@ class HomeViewController: UIViewController {
         super.viewDidLoad()
         configTableView()
         navigationItem.title = "おすすめ"
-        
-        func configTableView(){
-            tableView.dataSource = self
-            tableView.delegate = self
-            tableView.tableFooterView = UIView()
-            setTweetData()
-            //カスタムセル
-            let nib = UINib(nibName: "TweetTableViewCell", bundle: nil)
-            tableView.register(nib, forCellReuseIdentifier: "Cell")
-        }
-        
     }
+        
+    func configTableView() {
+        tableView.dataSource = self
+        tableView.delegate = self
+        tableView.tableFooterView = UIView()
+        setTweetData()
+        //カスタムセル
+        let nib = UINib(nibName: "TweetTableViewCell", bundle: nil)
+        tableView.register(nib, forCellReuseIdentifier: "Cell")
+    }
+        
     
     func setTweetData() {
         let tweetDataModel1 = TweetDataModel(name: "ユーザー名1", text: "ツイート内容1")
