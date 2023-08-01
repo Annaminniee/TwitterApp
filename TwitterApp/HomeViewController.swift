@@ -28,7 +28,6 @@ class HomeViewController: UIViewController {
         let nib = UINib(nibName: "TweetTableViewCell", bundle: nil)
         tableView.register(nib, forCellReuseIdentifier: "Cell")
     }
-        
     
     func setTweetData() {
         let tweetDataModel1 = TweetDataModel(name: "ユーザー名1", text: "ツイート内容1")
