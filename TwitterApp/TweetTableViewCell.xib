@@ -26,7 +26,7 @@
                         <nil key="highlightedColor"/>
                     </label>
                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="detailLabel" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="t4U-YY-zgD">
-                        <rect key="frame" x="30" y="54" width="836" height="18"/>
+                        <rect key="frame" x="30" y="54" width="836" height="126"/>
                         <constraints>
                             <constraint firstAttribute="width" constant="836" id="Xkp-oi-Hth"/>
                         </constraints>
@@ -36,6 +36,7 @@
                     </label>
                 </subviews>
                 <constraints>
+                    <constraint firstAttribute="bottom" secondItem="t4U-YY-zgD" secondAttribute="bottom" constant="30" id="0MI-Ra-4rN"/>
                     <constraint firstItem="FdO-Ri-uGz" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="30" id="HkN-T4-Aa5"/>
                     <constraint firstItem="t4U-YY-zgD" firstAttribute="top" secondItem="FdO-Ri-uGz" secondAttribute="bottom" id="QCx-ol-Oph"/>
                     <constraint firstItem="FdO-Ri-uGz" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="10" id="jPK-zv-TXj"/>
