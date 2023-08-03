@@ -58,7 +58,6 @@ extension HomeViewController: UITableViewDataSource {
 extension HomeViewController: UITableViewDelegate {
     /// セルの高さを設定するメソッド
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
-        tableView.estimatedRowHeight = 100
         return UITableView.automaticDimension
     }
 }
