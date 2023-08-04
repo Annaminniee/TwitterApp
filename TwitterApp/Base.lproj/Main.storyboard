@@ -16,26 +16,44 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <tableView clipsSubviews="YES" contentMode="scaleToFill" misplaced="YES" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="9ZN-Sx-w7N">
-                                <rect key="frame" x="0.0" y="92" width="414" height="808"/>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="9ZN-Sx-w7N">
+                                <rect key="frame" x="0.0" y="92" width="414" height="804"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <containerView key="tableFooterView" opaque="NO" contentMode="scaleToFill" id="e84-IU-u34">
+                                    <rect key="frame" x="0.0" y="0.0" width="414" height="808"/>
+                                    <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMinY="YES"/>
+                                </containerView>
                                 <connections>
                                     <outlet property="dataSource" destination="BYZ-38-t0r" id="5Mw-mK-waD"/>
                                     <outlet property="delegate" destination="BYZ-38-t0r" id="rjG-LW-bIF"/>
                                 </connections>
                             </tableView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="W5O-kL-zc8">
+                                <rect key="frame" x="334" y="812" width="50" height="50"/>
+                                <color key="backgroundColor" systemColor="systemBlueColor"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="50" id="0nI-0z-ePh"/>
+                                    <constraint firstAttribute="height" constant="50" id="e7B-ra-CdG"/>
+                                </constraints>
+                                <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain" title="＋"/>
+                            </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
-                            <constraint firstItem="9ZN-Sx-w7N" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="CyG-2j-hxc"/>
-                            <constraint firstAttribute="bottom" secondItem="9ZN-Sx-w7N" secondAttribute="bottom" id="KIM-O8-eUd"/>
-                            <constraint firstItem="9ZN-Sx-w7N" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="hio-yq-iYs"/>
-                            <constraint firstItem="9ZN-Sx-w7N" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="pSd-xY-ubD"/>
+                            <constraint firstAttribute="bottom" secondItem="9ZN-Sx-w7N" secondAttribute="bottom" id="SIx-ma-qtY"/>
+                            <constraint firstItem="9ZN-Sx-w7N" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="X9m-br-zFe"/>
+                            <constraint firstAttribute="bottom" secondItem="W5O-kL-zc8" secondAttribute="bottom" constant="34" id="Xw0-zW-hqe"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="W5O-kL-zc8" secondAttribute="trailing" constant="30" id="bxQ-Rt-RbJ"/>
+                            <constraint firstItem="9ZN-Sx-w7N" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="h9u-8z-YTu"/>
+                            <constraint firstItem="9ZN-Sx-w7N" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="odC-jp-7ys"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="Jyx-kM-1Ed"/>
                     <connections>
+                        <outlet property="addButton" destination="W5O-kL-zc8" id="ERx-B1-1Zk"/>
                         <outlet property="tableView" destination="9ZN-Sx-w7N" id="oge-cA-VWb"/>
                     </connections>
                 </viewController>
@@ -63,6 +81,9 @@
     <resources>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+        <systemColor name="systemBlueColor">
+            <color red="0.0" green="0.47843137254901963" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
     </resources>
 </document>
