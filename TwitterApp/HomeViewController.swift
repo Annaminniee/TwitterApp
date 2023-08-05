@@ -16,12 +16,12 @@ class HomeViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        configTableView()
+        configureTableView()
         configureButton()
         navigationItem.title = "おすすめ"
     }
         
-    func configTableView() {
+    func configureTableView() {
         tableView.dataSource = self
         tableView.delegate = self
         tableView.tableFooterView = UIView()
