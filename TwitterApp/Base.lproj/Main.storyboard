@@ -37,7 +37,16 @@
                                 </constraints>
                                 <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <state key="normal" title="Button"/>
-                                <buttonConfiguration key="configuration" style="plain" title="＋"/>
+                                <buttonConfiguration key="configuration" style="plain">
+                                    <attributedString key="attributedTitle">
+                                        <fragment content="＋">
+                                            <attributes>
+                                                <font key="NSFont" size="25" name=".HiraKakuInterface-W3"/>
+                                                <font key="NSOriginalFont" metaFont="system" size="25"/>
+                                            </attributes>
+                                        </fragment>
+                                    </attributedString>
+                                </buttonConfiguration>
                                 <connections>
                                     <action selector="tapAddButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="npf-BR-1Kf"/>
                                 </connections>
