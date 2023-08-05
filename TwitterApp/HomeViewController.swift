@@ -13,6 +13,9 @@ class HomeViewController: UIViewController {
     
     @IBOutlet weak var tableView: UITableView!
     @IBOutlet weak var addButton: UIButton!
+    @IBAction func tapAddButton(_ sender: UIButton) {
+        // ツイートボタンを押した処理
+    }
     
     override func viewDidLoad() {
         super.viewDidLoad()
