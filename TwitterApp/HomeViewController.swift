@@ -12,14 +12,20 @@ class HomeViewController: UIViewController {
     var tweetDataList: [TweetDataModel] = []
     
     @IBOutlet weak var tableView: UITableView!
+    @IBOutlet weak var addButton: UIButton!
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        configTableView()
+        configureTableView()
+        configureButton()
         navigationItem.title = "おすすめ"
     }
+    
+    @IBAction func tapAddButton(_ sender: UIButton) {
+        // ツイートボタンを押した処理
+    }
         
-    func configTableView() {
+    func configureTableView() {
         tableView.dataSource = self
         tableView.delegate = self
         tableView.tableFooterView = UIView()
@@ -27,6 +33,10 @@ class HomeViewController: UIViewController {
         //カスタムセル
         let nib = UINib(nibName: "TweetTableViewCell", bundle: nil)
         tableView.register(nib, forCellReuseIdentifier: "Cell")
+    }
+    
+    func configureButton() {
+        addButton.layer.cornerRadius = addButton.bounds.width / 2
     }
     
     func setTweetData() {
