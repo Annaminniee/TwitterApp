@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="21701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="1Cl-OG-8bd">
+    <device id="retina6_12" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21679"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Editor View Controller-->
+        <scene sceneID="GeI-Kz-AXk">
+            <objects>
+                <viewController id="1Cl-OG-8bd" customClass="EditorViewController" customModule="TwitterApp" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="cey-dJ-iUF">
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="gQH-D8-H3o">
+                                <rect key="frame" x="10" y="103" width="99" height="44"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="44" id="h9C-SJ-FgZ"/>
+                                </constraints>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain" title="キャンセル">
+                                    <fontDescription key="titleFontDescription" name="YuGo-Medium" family="YuGothic" pointSize="15"/>
+                                </buttonConfiguration>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="l6U-Dt-21O">
+                                <rect key="frame" x="269" y="103" width="114" height="44"/>
+                                <color key="backgroundColor" systemColor="systemBlueColor"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="44" id="EgR-j3-SdH"/>
+                                </constraints>
+                                <color key="tintColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain">
+                                    <attributedString key="attributedTitle">
+                                        <fragment content="ツイートする">
+                                            <attributes>
+                                                <font key="NSFont" size="15" name="YuGo-Bold"/>
+                                                <font key="NSOriginalFont" size="12" name="Helvetica"/>
+                                            </attributes>
+                                        </fragment>
+                                    </attributedString>
+                                </buttonConfiguration>
+                            </button>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="1bN-4x-uDM">
+                                <rect key="frame" x="0.0" y="147" width="393" height="705"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                            </tableView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="VlP-aJ-h8x"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="1bN-4x-uDM" firstAttribute="leading" secondItem="VlP-aJ-h8x" secondAttribute="leading" id="4Dz-Tf-4YW"/>
+                            <constraint firstItem="1bN-4x-uDM" firstAttribute="top" secondItem="VlP-aJ-h8x" secondAttribute="top" constant="88" id="6O7-KH-rAF"/>
+                            <constraint firstItem="VlP-aJ-h8x" firstAttribute="trailing" secondItem="l6U-Dt-21O" secondAttribute="trailing" constant="10" id="DmV-tL-QFn"/>
+                            <constraint firstItem="gQH-D8-H3o" firstAttribute="leading" secondItem="VlP-aJ-h8x" secondAttribute="leading" constant="10" id="EyK-MQ-iSO"/>
+                            <constraint firstItem="l6U-Dt-21O" firstAttribute="centerY" secondItem="gQH-D8-H3o" secondAttribute="centerY" id="KCB-TW-bdz"/>
+                            <constraint firstItem="l6U-Dt-21O" firstAttribute="top" secondItem="VlP-aJ-h8x" secondAttribute="top" constant="44" id="Rqe-J5-L0W"/>
+                            <constraint firstAttribute="bottom" secondItem="1bN-4x-uDM" secondAttribute="bottom" id="m3s-6K-a2R"/>
+                            <constraint firstItem="1bN-4x-uDM" firstAttribute="trailing" secondItem="VlP-aJ-h8x" secondAttribute="trailing" id="nRV-oh-MHC"/>
+                            <constraint firstItem="gQH-D8-H3o" firstAttribute="top" secondItem="VlP-aJ-h8x" secondAttribute="top" constant="44" id="uCo-60-5rg"/>
+                        </constraints>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="8f0-r1-PnA" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-228.24427480916029" y="-37.323943661971832"/>
+        </scene>
+    </scenes>
+    <resources>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+        <systemColor name="systemBlueColor">
+            <color red="0.0" green="0.47843137254901963" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+    </resources>
+</document>
