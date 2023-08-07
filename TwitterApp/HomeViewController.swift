@@ -21,8 +21,9 @@ class HomeViewController: UIViewController {
         navigationItem.title = "おすすめ"
     }
     
+    // ツイートボタンを押した処理
     @IBAction func tapAddButton(_ sender: UIButton) {
-        // ツイートボタンを押した処理
+        transitionToEditorView()
     }
         
     func configureTableView() {
@@ -37,6 +38,13 @@ class HomeViewController: UIViewController {
     
     func configureButton() {
         addButton.layer.cornerRadius = addButton.bounds.width / 2
+    }
+    
+    func transitionToEditorView() {
+        let storyboard = UIStoryboard(name: "EditorViewController", bundle: nil)
+        guard let editorViewController = storyboard.instantiateInitialViewController() as?
+                EditorViewController else { return}
+        present(editorViewController, animated: true)
     }
     
     func setTweetData() {
