@@ -82,79 +82,8 @@
             </objects>
             <point key="canvasLocation" x="46.376811594202906" y="-2.6785714285714284"/>
         </scene>
-        <!--Editor View Controller-->
-        <scene sceneID="UUK-9c-6RI">
-            <objects>
-                <viewController storyboardIdentifier="EditorViewController" id="He4-9h-Tgc" customClass="EditorViewController" customModule="TwitterApp" customModuleProvider="target" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="6RA-Y2-pE9">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <subviews>
-                            <navigationBar contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="pGA-8a-298">
-                                <rect key="frame" x="0.0" y="48" width="414" height="44"/>
-                                <items>
-                                    <navigationItem id="2Is-4P-5OW">
-                                        <barButtonItem key="leftBarButtonItem" style="plain" id="Ccv-sV-Q98">
-                                            <button key="customView" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" id="7wc-0o-B8b">
-                                                <rect key="frame" x="20" y="5" width="111" height="34.5"/>
-                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                                <state key="normal" title="Button"/>
-                                                <buttonConfiguration key="configuration" style="plain" title="キャンセル"/>
-                                            </button>
-                                            <connections>
-                                                <action selector="tapCancelButton:" destination="He4-9h-Tgc" id="tkm-zx-dN8"/>
-                                            </connections>
-                                        </barButtonItem>
-                                        <barButtonItem key="rightBarButtonItem" style="plain" id="O3Y-0E-ksm">
-                                            <button key="customView" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" id="aEq-SY-Osl">
-                                                <rect key="frame" x="266" y="5" width="128" height="34.5"/>
-                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                                <state key="normal" title="Button"/>
-                                                <buttonConfiguration key="configuration" style="filled" title="ツイートする"/>
-                                                <connections>
-                                                    <action selector="tapTweetButton:" destination="He4-9h-Tgc" eventType="touchUpInside" id="rnV-mr-ojZ"/>
-                                                </connections>
-                                            </button>
-                                        </barButtonItem>
-                                    </navigationItem>
-                                </items>
-                            </navigationBar>
-                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="ux2-gf-Iyl">
-                                <rect key="frame" x="30" y="92" width="354" height="804"/>
-                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
-                                <string key="text">Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Nam liber te conscient to factor tum poen legum odioque civiuda.</string>
-                                <color key="textColor" systemColor="labelColor"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
-                            </textView>
-                        </subviews>
-                        <viewLayoutGuide key="safeArea" id="Bgc-v5-2JY"/>
-                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
-                        <constraints>
-                            <constraint firstItem="ux2-gf-Iyl" firstAttribute="top" secondItem="pGA-8a-298" secondAttribute="bottom" id="HsC-03-mWN"/>
-                            <constraint firstItem="pGA-8a-298" firstAttribute="leading" secondItem="6RA-Y2-pE9" secondAttribute="leading" id="S6h-UG-5fZ"/>
-                            <constraint firstItem="ux2-gf-Iyl" firstAttribute="leading" secondItem="Bgc-v5-2JY" secondAttribute="leading" constant="30" id="SD5-c9-4dD"/>
-                            <constraint firstAttribute="trailing" secondItem="pGA-8a-298" secondAttribute="trailing" id="cuq-hi-UJc"/>
-                            <constraint firstItem="pGA-8a-298" firstAttribute="top" secondItem="Bgc-v5-2JY" secondAttribute="top" id="gay-jm-crN"/>
-                            <constraint firstAttribute="bottom" secondItem="ux2-gf-Iyl" secondAttribute="bottom" id="sYM-Jp-1Vi"/>
-                            <constraint firstItem="ux2-gf-Iyl" firstAttribute="trailing" secondItem="Bgc-v5-2JY" secondAttribute="trailing" constant="-30" id="z7m-QU-SIu"/>
-                        </constraints>
-                    </view>
-                    <connections>
-                        <outlet property="cancelButton" destination="Ccv-sV-Q98" id="zic-DA-Y7u"/>
-                        <outlet property="textView" destination="ux2-gf-Iyl" id="Mqe-xG-gCz"/>
-                        <outlet property="tweetButton" destination="aEq-SY-Osl" id="Hok-GD-Yxy"/>
-                    </connections>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="mXt-zb-bWb" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="44.927536231884062" y="655.58035714285711"/>
-        </scene>
     </scenes>
     <resources>
-        <systemColor name="labelColor">
-            <color red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-        </systemColor>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>
