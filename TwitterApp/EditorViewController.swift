@@ -12,7 +12,7 @@ class EditorViewController: UIViewController {
     var text: String = ""
 
     @IBOutlet weak var textView: UITextView!
-    @IBOutlet weak var cancelButton: UIButton!
+    @IBOutlet weak var cancelButton: UIBarButtonItem!
     @IBOutlet weak var tweetButton: UIButton!
     
     override func viewDidLoad() {
@@ -30,7 +30,7 @@ class EditorViewController: UIViewController {
         tweetButton.layer.cornerRadius = 20.0
     }
     
-    @IBAction func tapCancelButton(_ sender: UIButton) {
+    @IBAction func tapCancelButton(_ sender: UIBarButtonItem) {
         transitionToHomeView()
     }
     

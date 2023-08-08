@@ -19,7 +19,6 @@
 		95FF08DD2A709B6D0023EFBB /* TweetDataModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 95FF08DC2A709B6D0023EFBB /* TweetDataModel.swift */; };
 		95FF08E82A74DBA30023EFBB /* TweetTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 95FF08E62A74DBA30023EFBB /* TweetTableViewCell.swift */; };
 		95FF08E92A74DBA30023EFBB /* TweetTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 95FF08E72A74DBA30023EFBB /* TweetTableViewCell.xib */; };
-		95FF08F12A7F24380023EFBB /* EditorViewController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 95FF08F02A7F24380023EFBB /* EditorViewController.storyboard */; };
 		95FF08F32A7F24640023EFBB /* EditorViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 95FF08F22A7F24640023EFBB /* EditorViewController.swift */; };
 /* End PBXBuildFile section */
 
@@ -57,7 +56,6 @@
 		95FF08DC2A709B6D0023EFBB /* TweetDataModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TweetDataModel.swift; sourceTree = "<group>"; };
 		95FF08E62A74DBA30023EFBB /* TweetTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TweetTableViewCell.swift; sourceTree = "<group>"; };
 		95FF08E72A74DBA30023EFBB /* TweetTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = TweetTableViewCell.xib; sourceTree = "<group>"; };
-		95FF08F02A7F24380023EFBB /* EditorViewController.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = EditorViewController.storyboard; sourceTree = "<group>"; };
 		95FF08F22A7F24640023EFBB /* EditorViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditorViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -119,7 +117,6 @@
 				95FF08DC2A709B6D0023EFBB /* TweetDataModel.swift */,
 				95FF08E62A74DBA30023EFBB /* TweetTableViewCell.swift */,
 				95FF08E72A74DBA30023EFBB /* TweetTableViewCell.xib */,
-				95FF08F02A7F24380023EFBB /* EditorViewController.storyboard */,
 				95FF08F22A7F24640023EFBB /* EditorViewController.swift */,
 			);
 			path = TwitterApp;
@@ -247,7 +244,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				95FF08B12A6BAA140023EFBB /* LaunchScreen.storyboard in Resources */,
-				95FF08F12A7F24380023EFBB /* EditorViewController.storyboard in Resources */,
 				95FF08AE2A6BAA140023EFBB /* Assets.xcassets in Resources */,
 				95FF08AC2A6BAA130023EFBB /* Main.storyboard in Resources */,
 				95FF08E92A74DBA30023EFBB /* TweetTableViewCell.xib in Resources */,

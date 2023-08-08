@@ -41,10 +41,9 @@ class HomeViewController: UIViewController {
     }
     
     func transitionToEditorView() {
-        let storyboard = UIStoryboard(name: "EditorViewController", bundle: nil)
-        guard let editorViewController = storyboard.instantiateInitialViewController() as?
-                EditorViewController else { return}
-        present(editorViewController, animated: true)
+        let vc = EditorViewController()
+                let navi = UINavigationController(rootViewController: vc)
+                navigationController?.present(navi, animated: true)
     }
     
     func setTweetData() {
