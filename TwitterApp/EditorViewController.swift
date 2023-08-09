@@ -35,7 +35,7 @@ class EditorViewController: UIViewController {
     }
     
     @IBAction func tapTweetButton(_ sender: UIButton) {
-        transitionToHomeView()
+        // TODO: 保存して閉じる処理
     }
     
     func transitionToHomeView() {
