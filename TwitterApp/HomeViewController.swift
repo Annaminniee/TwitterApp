@@ -42,8 +42,9 @@ class HomeViewController: UIViewController {
     
     func transitionToEditorView() {
         let vc = EditorViewController()
-                let navi = UINavigationController(rootViewController: vc)
-                navigationController?.present(navi, animated: true)
+        let navi = UINavigationController(rootViewController: vc)
+        navi.modalPresentationStyle = .fullScreen
+        navigationController?.present(navi, animated: true)
     }
     
     func setTweetData() {
