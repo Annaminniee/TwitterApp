@@ -30,8 +30,10 @@ class EditorViewController: UIViewController {
         tweetButton.layer.cornerRadius = 20.0
     }
     
-    @IBAction func tapCancelButton(_ sender: UIButton) {
-        transitionToHomeView()
+    // 閉じるボタンをタップ
+    @objc func closeButtonTapped() {
+    // 前の画面に戻る
+    navigationController?.popViewController(animated: true)
     }
     
     @IBAction func tapTweetButton(_ sender: UIButton) {

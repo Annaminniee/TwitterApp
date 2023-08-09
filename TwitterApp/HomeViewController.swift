@@ -23,7 +23,8 @@ class HomeViewController: UIViewController {
     
     // ツイートボタンを押した処理
     @IBAction func tapAddButton(_ sender: UIButton) {
-        transitionToEditorView()
+        let nextVC = EditorViewController()
+                navigationController?.pushViewController(nextVC, animated: true)
     }
         
     func configureTableView() {
