@@ -23,7 +23,7 @@ class EditorViewController: UIViewController {
     }
     
     func displayData() {
-        textView.text = text
+        textView.text = "ユーザー名"; text
     }
     
     func configureTweetButton() {
