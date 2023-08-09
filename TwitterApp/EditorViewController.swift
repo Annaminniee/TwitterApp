@@ -11,6 +11,7 @@ class EditorViewController: UIViewController {
     
     var text: String = ""
 
+    @IBOutlet weak var userName: UILabel!
     @IBOutlet weak var textView: UITextView!
     @IBOutlet weak var cancelButton: UIButton!
     @IBOutlet weak var tweetButton: UIButton!
@@ -23,7 +24,8 @@ class EditorViewController: UIViewController {
     }
     
     func displayData() {
-        textView.text = "ユーザー名"; text
+        userName.text = "ユーザー名"
+        textView.text = text
     }
     
     func configureTweetButton() {

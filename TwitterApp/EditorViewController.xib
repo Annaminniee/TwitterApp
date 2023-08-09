@@ -13,6 +13,7 @@
                 <outlet property="cancelButton" destination="H9y-x2-HHD" id="S4G-3N-j3Q"/>
                 <outlet property="textView" destination="fq6-vi-pEC" id="Tx6-Bs-AR7"/>
                 <outlet property="tweetButton" destination="tsp-3p-FO1" id="wjf-uY-ahu"/>
+                <outlet property="userName" destination="nci-hH-tEY" id="FzB-1O-ncf"/>
                 <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
             </connections>
         </placeholder>
@@ -50,12 +51,18 @@
                         </navigationItem>
                     </items>
                 </navigationBar>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="nci-hH-tEY">
+                    <rect key="frame" x="30" y="103" width="48" height="33"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                    <nil key="textColor"/>
+                    <nil key="highlightedColor"/>
+                </label>
                 <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="fq6-vi-pEC">
-                    <rect key="frame" x="30" y="92" width="333" height="760"/>
+                    <rect key="frame" x="30" y="146" width="333" height="706"/>
                     <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                     <string key="text">Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Nam liber te conscient to factor tum poen legum odioque civiuda.</string>
                     <color key="textColor" systemColor="labelColor"/>
-                    <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="15"/>
                     <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                 </textView>
             </subviews>
@@ -63,12 +70,15 @@
             <color key="backgroundColor" systemColor="systemBackgroundColor"/>
             <constraints>
                 <constraint firstItem="aJU-7H-G9d" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" constant="48" id="225-ep-Fup"/>
+                <constraint firstItem="nci-hH-tEY" firstAttribute="top" secondItem="fq6-vi-pEC" secondAttribute="top" constant="-43" id="Fge-Uz-Wrm"/>
                 <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="fq6-vi-pEC" secondAttribute="trailing" constant="30" id="LPq-ks-Dbu"/>
-                <constraint firstItem="fq6-vi-pEC" firstAttribute="top" secondItem="aJU-7H-G9d" secondAttribute="bottom" id="On5-Pn-T6u"/>
+                <constraint firstItem="nci-hH-tEY" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="30" id="S7S-hd-C6P"/>
                 <constraint firstItem="fq6-vi-pEC" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="30" id="VcA-ez-XTo"/>
                 <constraint firstAttribute="bottom" secondItem="fq6-vi-pEC" secondAttribute="bottom" id="YZx-qM-xit"/>
                 <constraint firstItem="aJU-7H-G9d" firstAttribute="centerX" secondItem="fq6-vi-pEC" secondAttribute="centerX" id="hAi-QT-XdG"/>
+                <constraint firstItem="nci-hH-tEY" firstAttribute="bottom" secondItem="aJU-7H-G9d" secondAttribute="bottom" constant="44" id="qS1-t3-pK7"/>
                 <constraint firstItem="aJU-7H-G9d" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" id="vqZ-de-zyw"/>
+                <constraint firstItem="fq6-vi-pEC" firstAttribute="top" secondItem="nci-hH-tEY" secondAttribute="bottom" constant="10" id="wU5-dw-SNL"/>
             </constraints>
             <point key="canvasLocation" x="23.664122137404579" y="20.422535211267608"/>
         </view>
