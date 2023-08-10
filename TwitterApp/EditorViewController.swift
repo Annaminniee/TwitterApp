@@ -34,11 +34,11 @@ class EditorViewController: UIViewController {
     
     // 閉じるボタンをタップ
     @objc func closeButtonTapped() {
-    // 前の画面に戻る
-    navigationController?.popViewController(animated: true)
+        // 前の画面に戻る
+        dismiss(animated: true, completion: nil)
     }
     
-    @IBAction func tapTweetButton(_ sender: UIButton) {
+    @objc func tweetButtonTapped() {
         // TODO: 保存して閉じる処理
     }
     
