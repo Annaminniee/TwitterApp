@@ -10,9 +10,9 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="EditorViewController" customModule="TwitterApp" customModuleProvider="target">
             <connections>
-                <outlet property="cancelButton" destination="H9y-x2-HHD" id="S4G-3N-j3Q"/>
+                <outlet property="cancelButton" destination="H9y-x2-HHD" id="sdG-bg-IXA"/>
                 <outlet property="textView" destination="fq6-vi-pEC" id="Tx6-Bs-AR7"/>
-                <outlet property="tweetButton" destination="tsp-3p-FO1" id="wjf-uY-ahu"/>
+                <outlet property="tweetButton" destination="tsp-3p-FO1" id="Ftu-Rv-Fng"/>
                 <outlet property="userName" destination="obq-v2-k9d" id="m5n-Lt-5Jt"/>
                 <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
             </connections>
@@ -33,13 +33,9 @@
                                     <state key="normal" title="Button"/>
                                     <buttonConfiguration key="configuration" style="plain" title="キャンセル"/>
                                     <connections>
-                                        <action selector="cancelButtonTapped:" destination="-1" eventType="touchUpInside" id="q3N-a8-nyr"/>
-                                        <action selector="tapCancelButton:" destination="-1" eventType="touchUpInside" id="EuH-EP-utY"/>
+                                        <action selector="cancelButtonTapped:" destination="-1" eventType="touchUpInside" id="WOc-t5-x4m"/>
                                     </connections>
                                 </button>
-                                <connections>
-                                    <action selector="closeButtonTapped:" destination="-1" id="e7j-ms-Lzv"/>
-                                </connections>
                             </barButtonItem>
                             <barButtonItem key="rightBarButtonItem" style="plain" id="cHz-q7-FM2">
                                 <button key="customView" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" id="tsp-3p-FO1">
@@ -49,6 +45,7 @@
                                     <buttonConfiguration key="configuration" style="filled" title="ツイートする"/>
                                     <connections>
                                         <action selector="tapTweetButton:" destination="-1" eventType="touchUpInside" id="qbk-pY-e0n"/>
+                                        <action selector="tweetButtonTapped:" destination="-1" eventType="touchUpInside" id="3JG-hr-Htw"/>
                                     </connections>
                                 </button>
                             </barButtonItem>

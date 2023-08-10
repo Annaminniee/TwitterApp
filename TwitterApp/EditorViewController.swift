@@ -21,6 +21,7 @@ class EditorViewController: UIViewController {
         displayData()
         configureTweetButton()
         setDoneButton()
+        setNavigationBarButton()
     }
     
     func displayData() {
@@ -33,13 +34,18 @@ class EditorViewController: UIViewController {
     }
     
     // 閉じるボタンをタップ
-    @IBAction func cancelButtonTapped(_ sender: UIButton) {
-    // 前の画面に戻る
+    @objc func tapcancelButton() {
+        // 前の画面に戻る
         dismiss(animated: true, completion: nil)
     }
     
-    @objc func tweetButtonTapped() {
+    @objc func taptweetButton() {
         // TODO: 保存して閉じる処理
+    }
+    
+    func setNavigationBarButton() {
+        let _: Selector = #selector(tapcancelButton)
+        let _: Selector = #selector(taptweetButton)
     }
     
     func transitionToHomeView() {
