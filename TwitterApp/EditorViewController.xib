@@ -33,9 +33,13 @@
                                     <state key="normal" title="Button"/>
                                     <buttonConfiguration key="configuration" style="plain" title="キャンセル"/>
                                     <connections>
+                                        <action selector="cancelButtonTapped:" destination="-1" eventType="touchUpInside" id="q3N-a8-nyr"/>
                                         <action selector="tapCancelButton:" destination="-1" eventType="touchUpInside" id="EuH-EP-utY"/>
                                     </connections>
                                 </button>
+                                <connections>
+                                    <action selector="closeButtonTapped:" destination="-1" id="e7j-ms-Lzv"/>
+                                </connections>
                             </barButtonItem>
                             <barButtonItem key="rightBarButtonItem" style="plain" id="cHz-q7-FM2">
                                 <button key="customView" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" id="tsp-3p-FO1">

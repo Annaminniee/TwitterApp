@@ -33,8 +33,8 @@ class EditorViewController: UIViewController {
     }
     
     // 閉じるボタンをタップ
-    @objc func closeButtonTapped() {
-        // 前の画面に戻る
+    @IBAction func cancelButtonTapped(_ sender: UIButton) {
+    // 前の画面に戻る
         dismiss(animated: true, completion: nil)
     }
     
