@@ -11,7 +11,7 @@ class EditorViewController: UIViewController {
     
     var text: String = ""
 
-    @IBOutlet weak var userName: UILabel!
+    @IBOutlet weak var userName: UITextField!
     @IBOutlet weak var textView: UITextView!
     @IBOutlet weak var cancelButton: UIButton!
     @IBOutlet weak var tweetButton: UIButton!
