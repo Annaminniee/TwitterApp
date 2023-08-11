@@ -21,8 +21,12 @@ class HomeViewController: UIViewController {
         navigationItem.title = "おすすめ"
     }
     
+    // ツイートボタンを押した処理
     @IBAction func tapAddButton(_ sender: UIButton) {
-        // ツイートボタンを押した処理
+        let vc = EditorViewController()
+        let navi = UINavigationController(rootViewController: vc)
+        navi.modalPresentationStyle = .fullScreen
+        navigationController?.present(navi, animated: true)
     }
         
     func configureTableView() {
@@ -37,6 +41,13 @@ class HomeViewController: UIViewController {
     
     func configureButton() {
         addButton.layer.cornerRadius = addButton.bounds.width / 2
+    }
+    
+    func transitionToEditorView() {
+        let vc = EditorViewController()
+        let navi = UINavigationController(rootViewController: vc)
+        navi.modalPresentationStyle = .fullScreen
+        navigationController?.present(navi, animated: true)
     }
     
     func setTweetData() {
