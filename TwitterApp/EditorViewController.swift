@@ -28,7 +28,7 @@ class EditorViewController: UIViewController {
         navigationItem.leftBarButtonItem = closeButton
     }
     
-    @objc func closeButtonTapped() {
+    @objc func cancelButtonTapped() {
         // 前の画面に戻る
         dismiss(animated: true, completion: nil)
     }
