@@ -47,7 +47,7 @@ class EditorViewController: UIViewController {
         return customButton
     }
     
-    func configureBarButtonItems() {
+    func configureTweetButtonItems() {
         let barButtonItem = UIBarButtonItem(customView: createCustomButton())
         navigationItem.rightBarButtonItem = barButtonItem
     }
