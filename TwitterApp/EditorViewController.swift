@@ -21,11 +21,11 @@ class EditorViewController: UIViewController {
     
     /// キャンセルボタンの設定
     func configureCancelButtonItem() {
-        let closeButton = UIBarButtonItem(title: "キャンセル",
+        let cancelButton = UIBarButtonItem(title: "キャンセル",
                                           style: .plain,
                                           target: self,
-                                          action: #selector(closeButtonTapped))
-        navigationItem.leftBarButtonItem = closeButton
+                                          action: #selector(cancelButtonTapped))
+        navigationItem.leftBarButtonItem = cancelButton
     }
     
     @objc func cancelButtonTapped() {
