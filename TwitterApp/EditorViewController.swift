@@ -15,7 +15,7 @@ class EditorViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         configureCancelButtonItem()
-        configureBarButtonItems()
+        configureTweetButtonItem()
         textView.placeHolder = "いまどうしてる？"
     }
     
@@ -47,7 +47,7 @@ class EditorViewController: UIViewController {
         return customButton
     }
     
-    func configureTweetButtonItems() {
+    func configureTweetButtonItem() {
         let barButtonItem = UIBarButtonItem(customView: createCustomButton())
         navigationItem.rightBarButtonItem = barButtonItem
     }
