@@ -10,11 +10,12 @@ import UIKit
 class EditorViewController: UIViewController {
 
     @IBOutlet weak var userNameTextField: UITextField!
-    @IBOutlet weak var textView: UITextView!
+    @IBOutlet weak var textView: PlaceTextView!
     override func viewDidLoad() {
         super.viewDidLoad()
         configureCancelButtonItem()
         configureBarButtonItems()
+        textView.placeHolder = "いまどうしてる？"
     }
     
     /// キャンセルボタンの設定

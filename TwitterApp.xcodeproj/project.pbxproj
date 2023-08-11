@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		951FA6E32A861D1700855AA4 /* PlaceTextView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 951FA6E22A861D1700855AA4 /* PlaceTextView.swift */; };
 		95FF08A52A6BAA130023EFBB /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 95FF08A42A6BAA130023EFBB /* AppDelegate.swift */; };
 		95FF08A72A6BAA130023EFBB /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 95FF08A62A6BAA130023EFBB /* SceneDelegate.swift */; };
 		95FF08AC2A6BAA130023EFBB /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 95FF08AA2A6BAA130023EFBB /* Main.storyboard */; };
@@ -41,6 +42,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		951FA6E22A861D1700855AA4 /* PlaceTextView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlaceTextView.swift; sourceTree = "<group>"; };
 		95FF08A12A6BAA130023EFBB /* TwitterApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TwitterApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		95FF08A42A6BAA130023EFBB /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		95FF08A62A6BAA130023EFBB /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -121,6 +123,7 @@
 				95FF08E72A74DBA30023EFBB /* TweetTableViewCell.xib */,
 				95FF08F42A820A620023EFBB /* EditorViewController.swift */,
 				95FF08F52A820A620023EFBB /* EditorViewController.xib */,
+				951FA6E22A861D1700855AA4 /* PlaceTextView.swift */,
 			);
 			path = TwitterApp;
 			sourceTree = "<group>";
@@ -281,6 +284,7 @@
 				95FF08D92A6D10710023EFBB /* HomeViewController.swift in Sources */,
 				95FF08DD2A709B6D0023EFBB /* TweetDataModel.swift in Sources */,
 				95FF08E82A74DBA30023EFBB /* TweetTableViewCell.swift in Sources */,
+				951FA6E32A861D1700855AA4 /* PlaceTextView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

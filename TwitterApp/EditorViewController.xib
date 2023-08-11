@@ -26,7 +26,7 @@
                         <navigationItem id="cSr-Zf-Doh"/>
                     </items>
                 </navigationBar>
-                <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" text="いまどうしてる？" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="fq6-vi-pEC">
+                <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="fq6-vi-pEC" customClass="PlaceTextView" customModule="TwitterApp" customModuleProvider="target">
                     <rect key="frame" x="30" y="154" width="333" height="698"/>
                     <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                     <color key="textColor" systemColor="labelColor"/>
