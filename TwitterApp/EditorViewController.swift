@@ -9,9 +9,8 @@ import UIKit
 
 class EditorViewController: UIViewController {
 
-    @IBOutlet weak var userName: UITextField!
+    @IBOutlet weak var userNameTextField: UITextField!
     @IBOutlet weak var textView: UITextView!
-    
     override func viewDidLoad() {
         super.viewDidLoad()
         configureCancelButtonItem()

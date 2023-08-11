@@ -11,7 +11,7 @@
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="EditorViewController" customModule="TwitterApp" customModuleProvider="target">
             <connections>
                 <outlet property="textView" destination="fq6-vi-pEC" id="Tx6-Bs-AR7"/>
-                <outlet property="userName" destination="obq-v2-k9d" id="m5n-Lt-5Jt"/>
+                <outlet property="userNameTextField" destination="obq-v2-k9d" id="Cfk-rb-cLS"/>
                 <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
             </connections>
         </placeholder>
