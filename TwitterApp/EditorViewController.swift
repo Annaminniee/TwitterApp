@@ -8,18 +8,12 @@
 import UIKit
 
 class EditorViewController: UIViewController {
-    
-    var text: String = ""
 
     @IBOutlet weak var userName: UITextField!
     @IBOutlet weak var textView: UITextView!
-    @IBOutlet weak var cancelButton: UIButton!
-    @IBOutlet weak var tweetButton: UIButton!
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        displayData()
-        setDoneButton()
         configureCancelButtonItem()
         configureBarButtonItems()
     }
@@ -60,28 +54,5 @@ class EditorViewController: UIViewController {
     @objc func tweetButtonTapped() {
         // ボタンがタップされたときの処理をここに記述
         // TODO: 保存して閉じる処理
-    }
-    
-    func displayData() {
-        userName.text = "ユーザー名"
-        textView.text = text
-    }
-    
-    func transitionToHomeView() {
-        let storyboard = UIStoryboard(name: "Main", bundle: nil)
-        guard let homeViewController = storyboard.instantiateInitialViewController() as?
-                HomeViewController else { return }
-        present(homeViewController, animated: true)
-    }
-    
-    @objc func tapDoneButton() {
-        view.endEditing(true)
-    }
-    
-    func setDoneButton() {
-        let toolBar = UIToolbar(frame: CGRect(x: 0, y: 0, width: 320, height: 40))
-        let commitButton = UIBarButtonItem(barButtonSystemItem: .done, target: self, action: #selector(tapDoneButton))
-        toolBar.items = [commitButton]
-        textView.inputAccessoryView = toolBar
     }
 }
