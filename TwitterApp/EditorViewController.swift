@@ -6,11 +6,8 @@
 //
 
 import UIKit
-import RealmSwift
 
 class EditorViewController: UIViewController {
-
-    var tweetData = TweetDataModel()
 
     @IBOutlet weak var userNameTextField: UITextField!
     @IBOutlet weak var textView: PlaceTextView!
@@ -20,8 +17,6 @@ class EditorViewController: UIViewController {
         configureCancelButtonItem()
         configureTweetButtonItem()
         textView.placeHolder = "いまどうしてる？"
-        userNameTextField.delegate = self
-        textView.delegate = self
     }
     
     /// キャンセルボタンの設定
@@ -60,29 +55,5 @@ class EditorViewController: UIViewController {
     @objc func tweetButtonTapped() {
         // ボタンがタップされたときの処理をここに記述
         // TODO: 保存して閉じる処理
-    }
-    
-    func saveData(with text: String) {
-        let realm = try! Realm()
-        try! realm.write {
-            tweetData.name = text
-            tweetData.text = text
-            realm.add(tweetData)
-        }
-        print("name: \(tweetData.name), text: \(tweetData.text)")
-    }
-}
-
-extension EditorViewController: UITextViewDelegate {
-    func textViewDidChange(_ textView: UITextView) {
-        let updatedText = textView.text ?? ""
-        saveData(with: updatedText)
-    }
-}
-
-extension EditorViewController: UITextFieldDelegate {
-    func userNameTextFieldDidChange(_ userNametextField: UITextField) {
-        let updatedText = userNametextField.text ?? ""
-        saveData(with: updatedText)
     }
 }
