@@ -67,13 +67,6 @@ class EditorViewController: UIViewController {
     }
 }
 
-extension EditorViewController: UITextViewDelegate {
-    func textViewDidChange(_ textView: UITextView) {
-        let updatedText = textView.text ?? ""
-        tweetButtonTapped(with: updatedText)
-    }
-}
-
 extension EditorViewController: UITextFieldDelegate {
     func userNameTextfieldDidChange(_ usernametextfield: UITextField) {
         let updatedText = usernametextfield.text ?? ""
