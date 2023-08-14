@@ -20,8 +20,6 @@ class EditorViewController: UIViewController {
         configureCancelButtonItem()
         configureTweetButtonItem()
         textView.placeHolder = "いまどうしてる？"
-        textView.delegate = self
-        userNameTextField.delegate = self
     }
     
     /// キャンセルボタンの設定
@@ -57,7 +55,7 @@ class EditorViewController: UIViewController {
         navigationItem.rightBarButtonItem = barButtonItem
     }
     
-    @objc func tweetButtonTapped(with text: String) {
+    @objc func tweetButtonTapped() {
         let realm = try! Realm()
         try! realm.write {
             tweetData.text = text
