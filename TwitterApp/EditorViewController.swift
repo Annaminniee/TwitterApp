@@ -66,10 +66,3 @@ class EditorViewController: UIViewController {
         print("text: \(tweetData.text)")
     }
 }
-
-extension EditorViewController: UITextFieldDelegate {
-    func userNameTextfieldDidChange(_ usernametextfield: UITextField) {
-        let updatedText = usernametextfield.text ?? ""
-        tweetButtonTapped(with: updatedText)
-    }
-}
