@@ -57,12 +57,7 @@ class EditorViewController: UIViewController {
         navigationItem.rightBarButtonItem = barButtonItem
     }
     
-    @objc func tweetButtonTapped() {
-        // ボタンがタップされたときの処理をここに記述
-        // TODO: 保存して閉じる処理
-    }
-    
-    func saveData(with text: String) {
+    @objc func tweetButtonTapped(with text: String) {
         let realm = try! Realm()
         try! realm.write {
             tweetData.text = text
@@ -75,13 +70,13 @@ class EditorViewController: UIViewController {
 extension EditorViewController: UITextViewDelegate {
     func textViewDidChange(_ textView: UITextView) {
         let updatedText = textView.text ?? ""
-        saveData(with: updatedText)
+        tweetButtonTapped(with: updatedText)
     }
 }
 
 extension EditorViewController: UITextFieldDelegate {
     func userNameTextfieldDidChange(_ usernametextfield: UITextField) {
         let updatedText = usernametextfield.text ?? ""
-        saveData(with: updatedText)
+        tweetButtonTapped(with: updatedText)
     }
 }
