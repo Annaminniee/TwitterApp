@@ -58,8 +58,8 @@ class EditorViewController: UIViewController {
     @objc func tweetButtonTapped() {
         let realm = try! Realm()
         try! realm.write {
-            tweetData.name = ""
-            tweetData.text = ""
+            tweetData.name = self.userNameTextField.text ?? ""
+            tweetData.text = self.textView.text ?? ""
             realm.add(tweetData)
         }
         print("name: \(tweetData.name), text: \(tweetData.text)")
