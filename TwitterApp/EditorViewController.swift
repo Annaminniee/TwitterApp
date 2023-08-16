@@ -6,8 +6,11 @@
 //
 
 import UIKit
+import RealmSwift
 
 class EditorViewController: UIViewController {
+    
+    var tweetData = TweetDataModel()
 
     @IBOutlet weak var userNameTextField: UITextField!
     @IBOutlet weak var textView: PlaceTextView!
@@ -53,7 +56,12 @@ class EditorViewController: UIViewController {
     }
     
     @objc func tweetButtonTapped() {
-        // ボタンがタップされたときの処理をここに記述
-        // TODO: 保存して閉じる処理
+        let realm = try! Realm()
+        try! realm.write {
+            tweetData.name = self.userNameTextField.text ?? ""
+            tweetData.text = self.textView.text ?? ""
+            realm.add(tweetData)
+        }
+        print("name: \(tweetData.name), text: \(tweetData.text)")
     }
 }

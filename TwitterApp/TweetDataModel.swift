@@ -6,8 +6,10 @@
 //
 
 import Foundation
+import RealmSwift
 
-struct TweetDataModel {
-    var name: String
-    var text: String
+class TweetDataModel: Object {
+    @Persisted var id: String = UUID().uuidString //データを一意に識別するための識別子
+    @Persisted var name: String = ""
+    @Persisted var text: String = ""
 }
