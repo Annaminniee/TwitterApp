@@ -64,6 +64,5 @@ class EditorViewController: UIViewController {
             // 前の画面に戻る
             dismiss(animated: true, completion: nil)
         }
-        print("name: \(tweetData.name), text: \(tweetData.text)")
     }
 }
