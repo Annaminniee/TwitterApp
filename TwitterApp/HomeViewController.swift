@@ -22,6 +22,12 @@ class HomeViewController: UIViewController {
         navigationItem.title = "おすすめ"
     }
     
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        setTweetData()
+        tableView.reloadData()
+    }
+    
     // ツイートボタンを押した処理
     @IBAction func tapAddButton(_ sender: UIButton) {
         let vc = EditorViewController()
@@ -48,12 +54,6 @@ class HomeViewController: UIViewController {
         let navi = UINavigationController(rootViewController: vc)
         navi.modalPresentationStyle = .fullScreen
         navigationController?.present(navi, animated: true)
-    }
-    
-    override func viewWillAppear(_ animated: Bool) {
-        super.viewWillAppear(animated)
-        setTweetData()
-        tableView.reloadData()
     }
     
     func setTweetData() {
