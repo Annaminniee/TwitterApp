@@ -61,6 +61,8 @@ class EditorViewController: UIViewController {
             tweetData.name = self.userNameTextField.text ?? ""
             tweetData.text = self.textView.text ?? ""
             realm.add(tweetData)
+            // 前の画面に戻る
+            dismiss(animated: true, completion: nil)
         }
         print("name: \(tweetData.name), text: \(tweetData.text)")
     }

@@ -6,9 +6,10 @@
 //
 
 import UIKit
+import RealmSwift
 
 class HomeViewController: UIViewController {
-
+    
     var tweetDataList: [TweetDataModel] = []
     
     @IBOutlet weak var tableView: UITableView!
@@ -28,12 +29,11 @@ class HomeViewController: UIViewController {
         navi.modalPresentationStyle = .fullScreen
         navigationController?.present(navi, animated: true)
     }
-        
+    
     func configureTableView() {
         tableView.dataSource = self
         tableView.delegate = self
         tableView.tableFooterView = UIView()
-        setTweetData()
         //カスタムセル
         let nib = UINib(nibName: "TweetTableViewCell", bundle: nil)
         tableView.register(nib, forCellReuseIdentifier: "Cell")
@@ -50,17 +50,16 @@ class HomeViewController: UIViewController {
         navigationController?.present(navi, animated: true)
     }
     
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        setTweetData()
+        tableView.reloadData()
+    }
+    
     func setTweetData() {
-        let tweetDataModel1 = TweetDataModel()
-        tweetDataModel1.name = "ユーザー名1"
-        tweetDataModel1.text = "ツイート内容1, ツイート内容1,ツイート内容1,ツイート内容1,ツイート内容1,ツイート内容1,ツイート内容1,ツイート内容1"
-        let tweetDataModel2 = TweetDataModel()
-        tweetDataModel2.name = "ユーザー名2"
-        tweetDataModel2.text = "ツイート内容2"
-        let tweetDataModel3 = TweetDataModel()
-        tweetDataModel3.name = "ユーザー名3"
-        tweetDataModel3.text = "ツイート内容3"
-        tweetDataList.append(contentsOf: [tweetDataModel1, tweetDataModel2, tweetDataModel3])
+        let realm = try! Realm()
+        let result = realm.objects(TweetDataModel.self)
+        tweetDataList = Array(result)
     }
 }
 
