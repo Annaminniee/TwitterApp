@@ -8,7 +8,7 @@
 import UIKit
 import RealmSwift
 
-class EditorViewController: UIViewController {
+class EditorViewController: UIViewController, UITextViewDelegate {
     
     var tweetData = TweetDataModel()
 
@@ -20,6 +20,7 @@ class EditorViewController: UIViewController {
         configureCancelButtonItem()
         configureTweetButtonItem()
         textView.placeHolder = "いまどうしてる？"
+        textView.delegate = self
     }
     
     /// キャンセルボタンの設定
@@ -53,6 +54,19 @@ class EditorViewController: UIViewController {
     func configureTweetButtonItem() {
         let barButtonItem = UIBarButtonItem(customView: createCustomButton())
         navigationItem.rightBarButtonItem = barButtonItem
+    }
+    //textview文字数制限
+    func textView(_ textView: UITextView, shouldChangeTextIn range: NSRange, replacementText text: String) -> Bool {
+        return textView.text.count + (text.count - range.length) <= 140 //140文字に制限
+    }
+    
+    func onValidation(text: Int) {
+        if text > 0 {
+            tweetData = TweetDataModel()
+        } else if text == 0 {
+            //投稿できない
+            //警告文を出す
+        }
     }
     
     @objc func tweetButtonTapped() {
