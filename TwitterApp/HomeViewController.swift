@@ -86,4 +86,14 @@ extension HomeViewController: UITableViewDelegate {
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
         return UITableView.automaticDimension
     }
+    
+    func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCell.EditingStyle, forRowAt indexPath: IndexPath) {
+            let targetTweet = tweetDataList[indexPath.row]
+            let realm = try! Realm()
+            try! realm.write {
+                realm.delete(targetTweet)
+            }
+            tweetDataList.remove(at: indexPath.row)
+            tableView.deleteRows(at: [indexPath], with: .automatic)
+        }
 }

@@ -20,6 +20,7 @@ class EditorViewController: UIViewController {
         configureCancelButtonItem()
         configureTweetButtonItem()
         textView.placeHolder = "いまどうしてる？"
+        textView.delegate = self
     }
     
     /// キャンセルボタンの設定
@@ -88,9 +89,14 @@ class EditorViewController: UIViewController {
         }
     }
 }
-//textview文字数制限
-extension HomeViewController: UITextViewDelegate {
-    func textView(_ textView: UITextView, shouldChangeTextIn range: NSRange, replacementText text: String) -> Bool {
+
+// MARK: - Extension UITextViewDelegate
+extension EditorViewController: UITextViewDelegate {
+
+    /// textview文字数制限
+    func textView(_ textView: UITextView,
+                  shouldChangeTextIn range: NSRange,
+                  replacementText text: String) -> Bool {
         return textView.text.count + (text.count - range.length) <= 140 //140文字に制限
     }
 }
