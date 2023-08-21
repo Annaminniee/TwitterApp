@@ -97,24 +97,24 @@ extension EditorViewController: UITextViewDelegate {
     func textView(_ textView: UITextView,
                   shouldChangeTextIn range: NSRange,
                   replacementText text: String) -> Bool {
-        return textView.text.count + (text.count - range.length) <= 140 //140文字に制限
+        // 140文字以下の場合
+        if textView.text.count + (text.count - range.length) <= 140 {
+            // 入力を続ける
+            return true
+        } else {
+            // 文字数制限アラートを表示
+            showCharacterLimitAlert()
+            // 入力を止める
+            return false
+        }
     }
     
     /// アラートを表示
-    func showAlert2() {
+    func showCharacterLimitAlert() {
         let alert = UIAlertController(title: "文字数制限オーバー",
                                       message: "ツイートは140文字以内にしてください。",
                                       preferredStyle: .alert)
         alert.addAction(UIAlertAction(title: "OK", style: .default))
         self.present(alert, animated: true, completion: nil)
-    }
-    
-    /// 140文字以上でアラートが出る
-    func textViewDidChange(_ textView: UITextView) {
-        if let text = textView.text, text.count > 140 {
-            showAlert2()
-        } else {
-            return
-        }
     }
 }
