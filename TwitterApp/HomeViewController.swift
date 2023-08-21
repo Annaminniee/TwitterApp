@@ -6,9 +6,10 @@
 //
 
 import UIKit
+import RealmSwift
 
 class HomeViewController: UIViewController {
-
+    
     var tweetDataList: [TweetDataModel] = []
     
     @IBOutlet weak var tableView: UITableView!
@@ -21,6 +22,12 @@ class HomeViewController: UIViewController {
         navigationItem.title = "おすすめ"
     }
     
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        setTweetData()
+        tableView.reloadData()
+    }
+    
     // ツイートボタンを押した処理
     @IBAction func tapAddButton(_ sender: UIButton) {
         let vc = EditorViewController()
@@ -28,12 +35,11 @@ class HomeViewController: UIViewController {
         navi.modalPresentationStyle = .fullScreen
         navigationController?.present(navi, animated: true)
     }
-        
+    
     func configureTableView() {
         tableView.dataSource = self
         tableView.delegate = self
         tableView.tableFooterView = UIView()
-        setTweetData()
         //カスタムセル
         let nib = UINib(nibName: "TweetTableViewCell", bundle: nil)
         tableView.register(nib, forCellReuseIdentifier: "Cell")
@@ -51,16 +57,9 @@ class HomeViewController: UIViewController {
     }
     
     func setTweetData() {
-        let tweetDataModel1 = TweetDataModel()
-        tweetDataModel1.name = "ユーザー名1"
-        tweetDataModel1.text = "ツイート内容1, ツイート内容1,ツイート内容1,ツイート内容1,ツイート内容1,ツイート内容1,ツイート内容1,ツイート内容1"
-        let tweetDataModel2 = TweetDataModel()
-        tweetDataModel2.name = "ユーザー名2"
-        tweetDataModel2.text = "ツイート内容2"
-        let tweetDataModel3 = TweetDataModel()
-        tweetDataModel3.name = "ユーザー名3"
-        tweetDataModel3.text = "ツイート内容3"
-        tweetDataList.append(contentsOf: [tweetDataModel1, tweetDataModel2, tweetDataModel3])
+        let realm = try! Realm()
+        let result = realm.objects(TweetDataModel.self)
+        tweetDataList = Array(result)
     }
 }
 
@@ -87,4 +86,14 @@ extension HomeViewController: UITableViewDelegate {
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
         return UITableView.automaticDimension
     }
+    
+    func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCell.EditingStyle, forRowAt indexPath: IndexPath) {
+            let targetTweet = tweetDataList[indexPath.row]
+            let realm = try! Realm()
+            try! realm.write {
+                realm.delete(targetTweet)
+            }
+            tweetDataList.remove(at: indexPath.row)
+            tableView.deleteRows(at: [indexPath], with: .automatic)
+        }
 }

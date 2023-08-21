@@ -20,6 +20,7 @@ class EditorViewController: UIViewController {
         configureCancelButtonItem()
         configureTweetButtonItem()
         textView.placeHolder = "いまどうしてる？"
+        textView.delegate = self
     }
     
     /// キャンセルボタンの設定
@@ -55,13 +56,65 @@ class EditorViewController: UIViewController {
         navigationItem.rightBarButtonItem = barButtonItem
     }
     
+    /// 「ツイートする」ボタンをタップ
     @objc func tweetButtonTapped() {
+        guard let userName = self.userNameTextField.text,
+              let tweetText = self.textView.text else { return }
+        
+        if userName.isEmpty || tweetText.isEmpty {
+            showAlert()
+        } else {
+            saveData(userName: userName, tweetText: tweetText)
+            // 前の画面に戻る
+            dismiss(animated: true, completion: nil)
+        }
+    }
+    
+    /// アラートを表示
+    func showAlert() {
+        let alert = UIAlertController(title: "項目が空です",
+                                      message: "ユーザー名とツイート文を入力してください。",
+                                      preferredStyle: .alert)
+        alert.addAction(UIAlertAction(title: "OK", style: .default))
+        self.present(alert, animated: true, completion: nil)
+    }
+    
+    /// データを保存
+    func saveData(userName: String, tweetText: String) {
         let realm = try! Realm()
         try! realm.write {
-            tweetData.name = self.userNameTextField.text ?? ""
-            tweetData.text = self.textView.text ?? ""
+            tweetData.name = userName
+            tweetData.text = tweetText
             realm.add(tweetData)
         }
-        print("name: \(tweetData.name), text: \(tweetData.text)")
+    }
+}
+
+// MARK: - Extension UITextViewDelegate
+extension EditorViewController: UITextViewDelegate {
+    
+    /// textview文字数制限
+    func textView(_ textView: UITextView,
+                  shouldChangeTextIn range: NSRange,
+                  replacementText text: String) -> Bool {
+        // 140文字以下の場合
+        if textView.text.count + (text.count - range.length) <= 140 {
+            // 入力を続ける
+            return true
+        } else {
+            // 文字数制限アラートを表示
+            showCharacterLimitAlert()
+            // 入力を止める
+            return false
+        }
+    }
+    
+    /// アラートを表示
+    func showCharacterLimitAlert() {
+        let alert = UIAlertController(title: "文字数制限オーバー",
+                                      message: "ツイートは140文字以内にしてください。",
+                                      preferredStyle: .alert)
+        alert.addAction(UIAlertAction(title: "OK", style: .default))
+        self.present(alert, animated: true, completion: nil)
     }
 }
