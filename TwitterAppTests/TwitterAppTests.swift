@@ -18,7 +18,13 @@ final class TwitterAppTests: XCTestCase {
         // Put teardown code here. This method is called after the invocation of each test method in the class.
     }
 
-    func testCheckCharacterLimit() throws {
+    func testCheckCharacterLimitTrue() throws {
+        let vc = EditorViewController()
+        let result = vc.checkCharacterLimit(textCount: 140)
+        XCTAssertTrue(result)
+    }
+    
+    func testCheckCharacterLimitFalse() throws {
         let vc = EditorViewController()
         let result = vc.checkCharacterLimit(textCount: 141)
         XCTAssertFalse(result)
