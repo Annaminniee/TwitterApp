@@ -20,8 +20,8 @@ final class TwitterAppTests: XCTestCase {
 
     func testCheckCharacterLimit() throws {
         let vc = EditorViewController()
-        let result = vc.checkCharacterLimit(textCount: 140)
-        XCTAssertTrue(result)
+        let result = vc.checkCharacterLimit(textCount: 141)
+        XCTAssertFalse(result)
     }
     
     func testPerformanceExample() throws {
