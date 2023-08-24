@@ -10,7 +10,6 @@
 		6BE2FA5DB31988EDFE9B3C8C /* Pods_TwitterApp_TwitterAppUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 443DBDB30112C06C37A0BF68 /* Pods_TwitterApp_TwitterAppUITests.framework */; };
 		771071BD5857E30AA1CA3972 /* Pods_TwitterAppTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 83A1CE97F688EDD5EAB6866E /* Pods_TwitterAppTests.framework */; };
 		951FA6E32A861D1700855AA4 /* PlaceTextView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 951FA6E22A861D1700855AA4 /* PlaceTextView.swift */; };
-		95C5CDD42A943628002F83D2 /* EditorViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 95FF08F42A820A620023EFBB /* EditorViewController.swift */; };
 		95FF08A52A6BAA130023EFBB /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 95FF08A42A6BAA130023EFBB /* AppDelegate.swift */; };
 		95FF08A72A6BAA130023EFBB /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 95FF08A62A6BAA130023EFBB /* SceneDelegate.swift */; };
 		95FF08AC2A6BAA130023EFBB /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 95FF08AA2A6BAA130023EFBB /* Main.storyboard */; };
@@ -442,7 +441,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				95FF08BC2A6BAA140023EFBB /* TwitterAppTests.swift in Sources */,
-				95C5CDD42A943628002F83D2 /* EditorViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
