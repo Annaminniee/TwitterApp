@@ -97,14 +97,16 @@ extension EditorViewController: UITextViewDelegate {
     func textView(_ textView: UITextView,
                   shouldChangeTextIn range: NSRange,
                   replacementText text: String) -> Bool {
+        let textCount = textView.text.count + (text.count - range.length)
+        return checkCharacterLimit(textCount: textCount)
+    }
+
+    func checkCharacterLimit(textCount: Int) -> Bool {
         // 140文字以下の場合
-        if textView.text.count + (text.count - range.length) <= 140 {
-            // 入力を続ける
+        if textCount <= 140 {
             return true
         } else {
-            // 文字数制限アラートを表示
             showCharacterLimitAlert()
-            // 入力を止める
             return false
         }
     }

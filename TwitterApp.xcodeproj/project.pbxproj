@@ -113,7 +113,6 @@
 				576923A74BFE5BFE1ECF0079 /* Pods-TwitterAppTests.debug.xcconfig */,
 				D67E42711E6E2A4BCD34ADA5 /* Pods-TwitterAppTests.release.xcconfig */,
 			);
-			name = Pods;
 			path = Pods;
 			sourceTree = "<group>";
 		};
